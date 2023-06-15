@@ -93,6 +93,7 @@ export default {
           this.$message.success(data.msg)
           // 将用户信息存储到 vuex 中
           console.log(data.userInfo)
+          console.log(data.userInfo.saTokenInfo)
           this.$store.commit('setUser', data.userInfo)
 
           // 根据可能存储到 redirect 数据进行跳转设置
