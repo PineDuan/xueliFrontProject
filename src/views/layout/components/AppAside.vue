@@ -85,6 +85,12 @@
             <el-menu-item index="/message">
                 <i class="el-icon-chat-line-square"></i><span>新增节点5</span>
             </el-menu-item>
+            <el-menu-item index="/display_area">
+                <i class="el-icon-document"></i><span>新增节点4</span>
+            </el-menu-item>
+            <el-menu-item index="/message">
+                <i class="el-icon-chat-line-square"></i><span>新增节点5</span>
+            </el-menu-item>
         </el-submenu>
         <el-submenu index="/user" v-if="hasPermissionStartsWith('project.user')">
             <template slot="title">
