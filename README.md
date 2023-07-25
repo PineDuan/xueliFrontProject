@@ -1,27 +1,3 @@
-# scnu_front_test01
+# xueliFrontProject
 
-## Project setup
-```
-yarn install
-```
-
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
-
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-
-### 总结
-这是一个非学历培训前端项目
+该项目为学历教育前端项目，包含了学籍、教学等10多个模块
