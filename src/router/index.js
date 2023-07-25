@@ -53,6 +53,38 @@ const routes = [
     ]
   },
   {
+    path: '/student',
+    component: () => import(/* webpackChunkName: 'student_index' */'@/views/student/index'),
+    meta: {
+      // 这个也可以直接给某个子路由进行设置，这时内部的子路由都需要认证，包括当前路由
+      requiresAuth: true
+    },
+    children: [
+      {
+        path: 'home',
+        alias: '/',
+        name: 'home',
+        component: () => import(/* webpackChunkName: 'student_home' */'@/views/student/index')
+      }
+    ]
+  },
+  {
+    path: '/lecturer',
+    component: () => import(/* webpackChunkName: 'lecturer_index' */'@/views/lecturer/index'),
+    meta: {
+      // 这个也可以直接给某个子路由进行设置，这时内部的子路由都需要认证，包括当前路由
+      requiresAuth: true
+    },
+    children: [
+      {
+        path: 'home',
+        alias: '/',
+        name: 'home',
+        component: () => import(/* webpackChunkName: 'lecturer_home' */'@/views/lecturer/index')
+      }
+    ]
+  },
+  {
     path: '*',
     name: 'error-page',
     component: () => import(/* webpackChunkName: 'error-page' */'@/views/error-page/index')
