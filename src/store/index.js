@@ -7,7 +7,10 @@ export default new Vuex.Store({
   state: {
     // 用于登录成功后 保存用户信息(初始值尝试读取本地存储)
     // JSON.parse 将本地存储的字符串信息转换为 对象 Object
-    user: JSON.parse(window.localStorage.getItem('user_scnu')) || null
+    user: JSON.parse(window.localStorage.getItem('user_scnu')) || null,
+
+    // 测试数据 用来模拟后台
+    login_return: { data: { code: 200, msg: '成功登录', userInfo: '234214121234ADDF' } }
   },
   getters: {
   },

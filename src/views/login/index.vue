@@ -3,7 +3,7 @@
       <el-tag
     type="success"
     effect="plain">
-    华南师范大学非学历教育服务平台
+    华南师范大学学历教育综合服务平台
   </el-tag>
         <el-form
         ref="form"

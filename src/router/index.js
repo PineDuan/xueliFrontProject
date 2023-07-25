@@ -28,7 +28,7 @@ const routes = [
   },
   {
     path: '/',
-    component: () => import(/* webpackChunkName: 'layout' */'@/views/layout/index'),
+    component: () => import(/* webpackChunkName: 'back_manage_index' */'@/views/back_manage/index'),
     meta: {
       // 这个也可以直接给某个子路由进行设置，这时内部的子路由都需要认证，包括当前路由
       requiresAuth: true
@@ -38,107 +38,17 @@ const routes = [
         path: 'home',
         alias: '/',
         name: 'home',
-        component: () => import(/* webpackChunkName: 'home' */'@/views/home/index')
+        component: () => import(/* webpackChunkName: 'home' */'@/views/back_manage/home')
       },
       {
-        path: 'role',
-        name: 'role',
-        component: () => import(/* webpackChunkName: 'role' */'@/views/role/index')
+        path: 'platform_user_info',
+        name: 'platform_user_info',
+        component: () => import(/* webpackChunkName: 'platform_user_info' */'@/views/back_manage/platform_user_manage/platform_user_info')
       },
       {
-        path: 'user',
-        name: 'user',
-        component: () => import(/* webpackChunkName: 'user' */'@/views/user/index')
-      },
-      {
-        path: 'menu',
-        name: 'menu',
-        component: () => import(/* webpackChunkName: 'menu' */'@/views/menu/index')
-      },
-      {
-        path: 'resource',
-        name: 'resource',
-        component: () => import(/* webpackChunkName: 'resource' */'@/views/resource/index')
-      },
-      {
-        path: 'project_create',
-        name: 'project_create',
-        component: () => import('@/views/project-create/index')
-      },
-      {
-        path: 'training_brief',
-        name: 'training_brief',
-        component: () => import('@/views/project-manage/brief')
-      },
-      {
-        path: 'project_record',
-        name: 'project_record',
-        component: () => import('@/views/project-manage/record')
-      },
-      {
-        path: 'display_area',
-        name: 'display_area',
-        component: () => import('@/views/project-manage/display_area')
-      },
-      {
-        path: 'file_export',
-        name: 'file_export',
-        component: () => import('@/views/project-manage/file_export')
-      },
-      {
-        path: 'forum',
-        name: 'forum',
-        component: () => import('@/views/project-manage/forum')
-      },
-      {
-        path: 'live_broadcast',
-        name: 'live_broadcast',
-        component: () => import('@/views/project-manage/live_broadcast')
-      },
-      {
-        path: 'train_staff',
-        name: 'train_staff',
-        component: () => import('@/views/project-manage/train_staff')
-      },
-      {
-        path: 'trainer',
-        name: 'trainer',
-        component: () => import('@/views/project-manage/trainer')
-      },
-      {
-        path: 'video',
-        name: 'video',
-        component: () => import('@/views/project-manage/video')
-      },
-      {
-        path: 'message',
-        name: 'message',
-        component: () => import('@/views/project-manage/message')
-      },
-      {
-        path: 'teacher_resources',
-        name: 'teacher_resources',
-        component: () => import('@/views/user/teacher_resources')
-      },
-      {
-        path: 'user_manage',
-        name: 'user_manage',
-        component: () => import('@/views/user/user_manage')
-      },
-      {
-        path: 'log',
-        name: 'log',
-        component: () => import(/* webpackChunkName: 'advert' */'@/views/platform/log')
-      },
-      {
-        path: 'analysis',
-        name: 'analysis',
-        component: () => import(/* webpackChunkName: 'advert_space' */'@/views/platform/analysis')
-      },
-      {
-        path: 'platform_message',
-        name: 'platform_message',
-        component: () => import(/* webpackChunkName: 'platform_message' */'@/views/platform/message')
+        path: 'platform_log_manage',
+        name: 'platform_log_manage',
+        component: () => import(/* webpackChunkName: 'platform_log_manage' */'@/views/back_manage/platform_user_manage/platform_user_log')
       }
     ]
   },
