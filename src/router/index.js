@@ -54,7 +54,7 @@ const routes = [
   },
   {
     path: '/student',
-    component: () => import(/* webpackChunkName: 'student_index' */'@/views/student/index'),
+    component: () => import(/* webpackChunkName: 'student_index' */'@/views/student/home'),
     meta: {
       // 这个也可以直接给某个子路由进行设置，这时内部的子路由都需要认证，包括当前路由
       requiresAuth: true
@@ -65,6 +65,16 @@ const routes = [
         alias: '/',
         name: 'home',
         component: () => import(/* webpackChunkName: 'student_home' */'@/views/student/index')
+      },
+      {
+        path: 'detail',
+        name: 'detail',
+        component: () => import(/* webpackChunkName: 'student_detail' */'@/views/student/detail')
+      },
+      {
+        path: 'plan',
+        name: 'plan',
+        component: () => import(/* webpackChunkName: 'student_plan' */'@/views/student/plan')
       }
     ]
   },
